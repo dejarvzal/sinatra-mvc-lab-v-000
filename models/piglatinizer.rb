@@ -5,22 +5,20 @@ class PigLatinizer
 
   def piglatinize(word)
     if
-      word.split("")[0].match(/^[aeiou]/) ||
-      word.split("")[0].match(/^[AEIOU]/)
+      # word.split("")[0].match(/^[aeiou]/) ||
+      word.split("")[0].match(/^[aeiouAEIOU]/)
       word << "way"
     else
-      !word.split("")[0].match(/[aeiou]/)
-       first_consonants = word.match(/\b([^aeiou]{1,})/)
+      !word.split("")[0].match(/[aeiouAEIOU]/)
+       first_consonants = word.match(/\b([^aeiouAEIOU]{1,})/)
        the_rest = word.gsub(/#{first_consonants}/, "")
        new_word = "#{the_rest}#{first_consonants}ay"
     end
   end
 
   def piglatinize_string(sentence)
-    binding.pry
-    words = sentence.split(" ")
-    words.map do |w| w.piglatinize
-
+    words = sentence.split("  ")
+    words.collect do |w| w.piglatinize
     end
   end
 
