@@ -4,6 +4,7 @@ require 'pry'
 class PigLatinizer
 
   def piglatinize(word)
+    # binding.pry
     if
       # word.split("")[0].match(/^[aeiou]/) ||
       word.split("")[0].match(/^[aeiouAEIOU]/)
@@ -17,8 +18,12 @@ class PigLatinizer
   end
 
   def piglatinize_string(sentence)
-    words = sentence.split("  ")
-    words.collect do |w| w.piglatinize
+    # binding.pry
+    words =[]
+    words << sentence.split("  ")
+    binding.pry
+    items = words.collect do |w| w.piglatinize
+      items.join
     end
   end
 
