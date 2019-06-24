@@ -7,7 +7,7 @@ class PigLatinizer
     # binding.pry
     if
       # word.split("")[0].match(/^[aeiou]/) ||
-      word.split("")[0].match(/^[aeiouAEIOU]/)
+      word.split(" ")[0].match(/^[aeiouAEIOU]/)
       word << "way"
     else
       !word.split("")[0].match(/[aeiouAEIOU]/)
