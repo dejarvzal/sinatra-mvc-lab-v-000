@@ -20,7 +20,8 @@ class PigLatinizer
   def piglatinize_string(sentence)
     # binding.pry
     words =[]
-    words << sentence.split("  ")
+    words << sentence.split(" ")
+    # words << sentence.split("  ")
     binding.pry
     items = words.collect do |w| w.piglatinize
       items.join
