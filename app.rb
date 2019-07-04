@@ -2,21 +2,14 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-  # get '/' do
-  #     # erb :reverse
-  #   end
+    get '/' do
+      erb :user_input
+    end
 
-    # post '/reverse' do
-    #   # puts params
-    #   original_string = params["string"]
-    #   @reversed_string = original_string.reverse
-    #   erb :reversed
-    # end
-    #
-    # get '/friends' do
-    #   # Write your code here!
-    #   @friends = ['Emily Wildin Davison', 'Harriet Tubman', 'Joan of Arc', 'Malala Yousafzai', 'Sojourner Truth']
-    #   erb :friends
-    # end
+    post '/piglatinize' do
+      params[:user_phrase]
+      # "Your word is #{params[:user_phrase]}"
+      # erb :user_input
+    end
 
 end
