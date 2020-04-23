@@ -14,7 +14,7 @@ class PigLatinizer
        new_word = string"#{the_rest}#{first_consonants}ay"
     end
     piglatinize_sentence(string)
-    end
+    
   end
 
 
@@ -31,8 +31,6 @@ class PigLatinizer
   #       the_rest = word.gsub(/#{first_consonants}/, "")
   #       new_word = "#{the_rest}#{first_consonants}ay"
   # end.join(" ")
-
-end
 
 end
 
