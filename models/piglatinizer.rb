@@ -14,7 +14,7 @@ class PigLatinizer
        new_word = string"#{the_rest}#{first_consonants}ay"
     end
     piglatinize_sentence(string)
-    
+
   end
 
 
